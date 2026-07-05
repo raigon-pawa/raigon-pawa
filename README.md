@@ -44,7 +44,7 @@ MOD-04  full-stack   REST APIs to frontends people actually enjoy — Vercel, Do
 
 ## 📡 Open a connection
 
-- 🌐 Portfolio: [raigon-pawa.github.io](https://raigon-pawa.github.io/)
+- 🌐 Portfolio: [raigon-pawa.github.io/raigon-pawa](https://raigon-pawa.github.io/raigon-pawa/)
 - 💼 LinkedIn: [kabbo-augustine-gomes](https://www.linkedin.com/in/kabbo-augustine-gomes-b132a1403)
 
 ---
