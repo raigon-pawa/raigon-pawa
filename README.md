@@ -26,7 +26,7 @@ raigon@pawa:~$ ./currently_running.sh
 
 | Project | What it is | Stack |
 |---|---|---|
-| [Silicon River](https://siliconriver-project.vercel.app/) | Social platform for PC enthusiasts — feeds, posts, and a timeline that argues about thermal paste | Full-stack · Vercel |
+| [Silicon River](https://myrig.app/) | The social network for PC builders — post your rig, log benchmarks, get rated, and follow other builders. Web and mobile apps, a hardware catalog, and moderation that blocks slurs but tolerates swearing at your airflow | Next.js · Flutter · Supabase · Cloudflare R2 · Vercel |
 | [Codex](https://github.com/raigon-pawa/codex-bot) | Modular Discord bot with 31 slash commands: study tools, Claude-powered AI chat, music, moderation, XP levels. Runs hardened in Docker on a NAS | discord.py · Docker · Claude API · SQLite |
 | [ModSelector](https://github.com/raigon-pawa/ModSelector) | JavaFX GUI for bulk-downloading Minecraft mods from Modrinth, with live search and SHA-512 integrity checks | Java · JavaFX · Modrinth API |
 | [QRCodeAPI](https://github.com/raigon-pawa/QRCodeAPI) | QR code generator API written from scratch — PNG, SVG, ASCII and JSON output, rate-limited and open to anyone | Node · REST |
