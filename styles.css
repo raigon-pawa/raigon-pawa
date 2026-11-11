@@ -1,0 +1,434 @@
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/bf4970bc.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/cb77e21b.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/64931c62.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/0737c3b0.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/0e073060.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/7dcb2f02.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/b69948c4.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/16b14ccd.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/b8e8dd75.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/2f431dbb.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/629ace90.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/da60860f.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/b69948c4.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/16b14ccd.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/b8e8dd75.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/2f431dbb.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/629ace90.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/da60860f.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/b69948c4.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/16b14ccd.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/b8e8dd75.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/2f431dbb.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/629ace90.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/da60860f.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/af65f00b.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/b67841ae.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/e7d93e4f.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/af65f00b.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/b67841ae.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/e7d93e4f.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/af65f00b.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/b67841ae.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/e7d93e4f.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/af65f00b.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/b67841ae.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/e7d93e4f.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+html, body { margin: 0; padding: 0; background: #0B0E13; }
+    ::selection { background: rgba(79,216,232,0.35); color: #ffffff; }
+    @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+    @keyframes scan { 0% { transform: translateY(-100%); } 100% { transform: translateY(100vh); } }
+    @keyframes flickerIn { 0% { opacity: 0; } 8% { opacity: 0.8; } 12% { opacity: 0.2; } 20% { opacity: 1; } 100% { opacity: 1; } }
+    @keyframes pulseDot { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+    @media (max-width: 760px) {
+      nav[data-screen-label="Nav"] { padding: 12px 20px !important; }
+      nav[data-screen-label="Nav"] > div { gap: 14px !important; }
+      nav[data-screen-label="Nav"] > div > a:not(:last-child) { display: none !important; }
+      #top { padding: 72px 22px 56px !important; }
+      #top h1 { font-size: clamp(44px, 13vw, 72px) !important; }
+      #projects, #about, #skills, #sponsor { padding: 24px 22px 60px !important; }
+      #contact { padding: 24px 22px 80px !important; }
+      #about > div, #sponsor > div { grid-template-columns: 1fr !important; gap: 28px !important; }
+      #projects a[href*="paugai"] { flex-direction: column !important; align-items: stretch !important; gap: 14px !important; }
+      footer[data-screen-label="Footer"] { padding: 16px 22px !important; }
+    }
+
+.s0 { --ac: #7B8CFF; min-height: 100vh; background: #0B0E13; color: #E6ECF2; font-family: 'Space Grotesk', sans-serif; position: relative; overflow-x: hidden; }
+.s1 { position: fixed; top: -300px; left: 50%; transform: translateX(-50%); width: 900px; height: 600px; background: radial-gradient(ellipse at center, rgba(79,216,232,0.07), transparent 70%); pointer-events: none; z-index: 0; }
+.s2 { position: fixed; inset: 0; pointer-events: none; z-index: 50; background: repeating-linear-gradient(0deg, rgba(0,0,0,0.13) 0px, rgba(0,0,0,0.13) 1px, transparent 1px, transparent 3px); }
+.s3 { position: fixed; left: 0; right: 0; top: 0; height: 120px; pointer-events: none; z-index: 51; background: linear-gradient(180deg, transparent, rgba(79,216,232,0.025), transparent); animation: scan 9s linear infinite; }
+.s4 { position: sticky; top: 0; z-index: 40; display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; background: rgba(11,14,19,0.82); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(148,180,200,0.12); }
+.s5 { font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700; color: var(--ac, #4FD8E8); text-decoration: none; letter-spacing: 0.08em; }
+.s6 { display: flex; gap: 32px; align-items: center; }
+.s7 { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8A97A6; text-decoration: none; letter-spacing: 0.06em; }
+.h8:hover { color: #E6ECF2; text-shadow: 1px 0 rgba(79,216,232,0.8), -1px 0 rgba(232,95,208,0.6); }
+.s9 { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #0B0E13; background: var(--ac, #4FD8E8); padding: 8px 16px; border-radius: 3px; text-decoration: none; font-weight: 700; letter-spacing: 0.06em; }
+.h10:hover { box-shadow: 0 0 18px rgba(79,216,232,0.5); }
+.s11 { position: relative; z-index: 1; max-width: 1060px; margin: 0 auto; padding: 110px 48px 90px; }
+.s12 { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8A97A6; display: flex; align-items: center; gap: 10px; margin-bottom: 28px; }
+.s13 { width: 8px; height: 8px; border-radius: 50%; background: #57F2A8; display: inline-block; animation: pulseDot 2.4s ease-in-out infinite; }
+.s14 { font-size: clamp(56px, 8vw, 104px); font-weight: 700; line-height: 0.98; margin: 0 0 12px; letter-spacing: -0.02em; cursor: default; display: inline-block; transition: text-shadow 0.1s; }
+.h15:hover { text-shadow: 3px 0 rgba(79,216,232,0.85), -3px 0 rgba(232,95,208,0.7); transform: skewX(-1deg); }
+.s16 { font-family: 'JetBrains Mono', monospace; font-size: clamp(17px, 2.2vw, 22px); color: var(--ac, #4FD8E8); min-height: 32px; margin-bottom: 34px; }
+.s17 { color: #8A97A6; }
+.s18 { animation: blink 1s step-end infinite; color: var(--ac, #4FD8E8); }
+.s19 { max-width: 560px; font-size: 17px; line-height: 1.65; color: #B9C4CF; margin: 0 0 40px; text-wrap: pretty; }
+.s20 { display: flex; gap: 16px; align-items: center; }
+.s21 { font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700; color: #0B0E13; background: var(--ac, #4FD8E8); padding: 13px 26px; border-radius: 3px; text-decoration: none; letter-spacing: 0.04em; }
+.h22:hover { box-shadow: 0 0 24px rgba(79,216,232,0.55); transform: translateY(-1px); }
+.s23 { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #E6ECF2; border: 1px solid rgba(148,180,200,0.3); padding: 12px 26px; border-radius: 3px; text-decoration: none; letter-spacing: 0.04em; }
+.h24:hover { border-color: var(--ac, #4FD8E8); color: var(--ac, #4FD8E8); }
+.s25 { position: relative; z-index: 1; max-width: 1060px; margin: 0 auto; padding: 40px 48px 90px; }
+.s26 { display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px; }
+.s27 { font-size: 34px; font-weight: 700; margin: 0; letter-spacing: -0.01em; }
+.s28 { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8A97A6; }
+.s29 { height: 1px; background: linear-gradient(90deg, var(--ac, #4FD8E8), transparent 60%); margin-bottom: 36px; opacity: 0.5; }
+.s30 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 20px; }
+.s31 { display: flex; flex-direction: column; gap: 14px; background: #10141B; border: 1px solid rgba(148,180,200,0.14); border-radius: 6px; padding: 26px 28px; text-decoration: none; color: inherit; transition: border-color 0.15s, transform 0.15s; }
+.h32:hover { border-color: var(--ac, #4FD8E8); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(79,216,232,0.2); }
+.s33 { display: flex; justify-content: space-between; align-items: center; }
+.s34 { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ac, #4FD8E8); letter-spacing: 0.12em; }
+.s35 { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8A97A6; }
+.s36 { font-size: 22px; font-weight: 600; margin: 0; }
+.h37:hover { text-shadow: 2px 0 rgba(79,216,232,0.7), -2px 0 rgba(232,95,208,0.5); }
+.s38 { font-size: 14.5px; line-height: 1.6; color: #B9C4CF; margin: 0; text-wrap: pretty; }
+.s39 { display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto; }
+.s40 { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8A97A6; border: 1px solid rgba(148,180,200,0.18); padding: 3px 9px; border-radius: 3px; }
+.s41 { grid-column: 1 / -1; display: flex; align-items: center; gap: 28px; background: linear-gradient(90deg, rgba(79,216,232,0.05), transparent 40%), #10141B; border: 1px solid rgba(148,180,200,0.14); border-radius: 6px; padding: 26px 28px; text-decoration: none; color: inherit; transition: border-color 0.15s, transform 0.15s; }
+.s42 { display: flex; flex-direction: column; gap: 14px; flex: 1; min-width: 0; }
+.s43 { font-size: 14.5px; line-height: 1.6; color: #B9C4CF; margin: 0; max-width: 640px; text-wrap: pretty; }
+.s44 { display: flex; gap: 8px; flex-wrap: wrap; }
+.s45 { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--ac, #4FD8E8); white-space: nowrap; flex-shrink: 0; }
+.s46 { display: grid; grid-template-columns: 1fr 1.4fr; gap: 48px; align-items: start; }
+.s47 { height: 1px; background: linear-gradient(90deg, var(--ac, #4FD8E8), transparent 60%); margin-bottom: 28px; opacity: 0.5; }
+.s48 { font-size: 16px; line-height: 1.7; color: #B9C4CF; margin: 0 0 18px; text-wrap: pretty; }
+.s49 { font-size: 16px; line-height: 1.7; color: #B9C4CF; margin: 0; text-wrap: pretty; }
+.s50 { background: #10141B; border: 1px solid rgba(148,180,200,0.14); border-radius: 6px; overflow: hidden; }
+.s51 { display: flex; align-items: center; gap: 8px; padding: 12px 18px; border-bottom: 1px solid rgba(148,180,200,0.12); background: rgba(148,180,200,0.04); }
+.s52 { width: 10px; height: 10px; border-radius: 50%; background: rgba(148,180,200,0.25); }
+.s53 { width: 10px; height: 10px; border-radius: 50%; background: var(--ac, #4FD8E8); opacity: 0.6; }
+.s54 { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8A97A6; margin-left: 10px; }
+.s55 { padding: 22px 24px; font-family: 'JetBrains Mono', monospace; font-size: 13.5px; line-height: 2.1; color: #B9C4CF; display: flex; flex-direction: column; }
+.s56 { color: #57F2A8; }
+.s57 { color: #E6ECF2; }
+.s58 { color: var(--ac, #4FD8E8); }
+.s59 { color: #E6ECF2; text-decoration: underline; text-decoration-color: rgba(79,216,232,0.4); }
+.h60:hover { color: var(--ac, #4FD8E8); }
+.s61 { color: #8A97A6; margin-top: 8px; }
+.s62 { animation: blink 1s step-end infinite; }
+.s63 { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
+.s64 { background: #10141B; border: 1px solid rgba(148,180,200,0.14); border-radius: 6px; padding: 24px; }
+.h65:hover { border-color: rgba(79,216,232,0.5); }
+.s66 { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ac, #4FD8E8); letter-spacing: 0.12em; margin-bottom: 12px; }
+.s67 { font-size: 19px; font-weight: 600; margin: 0 0 8px; }
+.s68 { font-size: 13.5px; line-height: 1.6; color: #8A97A6; margin: 0; text-wrap: pretty; }
+.s69 { display: grid; grid-template-columns: 1fr 1.3fr; gap: 48px; align-items: start; }
+.s70 { display: inline-flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700; color: #0B0E13; background: var(--ac, #4FD8E8); padding: 13px 26px; border-radius: 3px; text-decoration: none; letter-spacing: 0.04em; }
+.s71 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 16px; }
+.s72 { display: flex; flex-direction: column; gap: 8px; background: #10141B; border: 1px solid rgba(148,180,200,0.14); border-radius: 6px; padding: 22px 22px; text-decoration: none; color: inherit; transition: border-color 0.15s, transform 0.15s; }
+.h73:hover { border-color: var(--ac, #4FD8E8); transform: translateY(-3px); }
+.s74 { font-size: 22px; font-weight: 700; }
+.s75 { font-size: 13px; color: #8A97A6; font-weight: 400; }
+.s76 { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #8A97A6; line-height: 1.5; }
+.s77 { display: flex; flex-direction: column; gap: 8px; background: #10141B; border: 1px solid rgba(79,216,232,0.35); border-radius: 6px; padding: 22px 22px; text-decoration: none; color: inherit; transition: border-color 0.15s, transform 0.15s; position: relative; }
+.h78:hover { border-color: var(--ac, #4FD8E8); transform: translateY(-3px); box-shadow: 0 0 24px rgba(79,216,232,0.2); }
+.s79 { position: absolute; top: -10px; right: 16px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #0B0E13; background: var(--ac, #4FD8E8); padding: 2px 8px; border-radius: 3px; letter-spacing: 0.06em; }
+.s80 { position: relative; z-index: 1; max-width: 1060px; margin: 0 auto; padding: 40px 48px 110px; }
+.s81 { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+.s82 { display: flex; flex-direction: column; gap: 6px; background: #10141B; border: 1px solid rgba(148,180,200,0.14); border-radius: 6px; padding: 20px 22px; text-decoration: none; }
+.h83:hover { border-color: var(--ac, #4FD8E8); transform: translateY(-2px); }
+.s84 { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8A97A6; letter-spacing: 0.1em; }
+.s85 { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--ac, #4FD8E8); }
+.s86 { display: flex; flex-direction: column; gap: 6px; background: #10141B; border: 1px solid rgba(148,180,200,0.14); border-radius: 6px; padding: 20px 22px; cursor: pointer; text-align: left; font-family: inherit; }
+.s87 { display: flex; flex-direction: column; gap: 6px; background: #10141B; border: 1px dashed rgba(148,180,200,0.3); border-radius: 6px; padding: 20px 22px; text-decoration: none; }
+.s88 { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #8A97A6; }
+.s89 { position: relative; z-index: 1; border-top: 1px solid rgba(148,180,200,0.12); padding: 20px 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
