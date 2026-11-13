@@ -461,6 +461,11 @@ h1 { font-size: 1.95rem; font-weight: 600; letter-spacing: -0.025em; margin: 0 0
 .bolt:hover { box-shadow: 0 0 10px rgba(255, 92, 40, 0.5); }
 .bolt[data-clicks="1"] { transform: rotate(35deg); }
 .bolt[data-clicks="2"] { transform: rotate(-72deg) translateY(1px); box-shadow: 0 0 12px var(--orange); }
+/* while unbolted every module carries a loose bolt; clicking it fastens that module back into its slot */
+.bolt-back { position: absolute; top: 6px; right: 6px; }
+.module.unbolted .bolt { transform: rotate(-72deg); box-shadow: 0 0 12px var(--orange); }
+.module.fastening .bolt { transform: rotate(0deg); box-shadow: none; }
+.slot { border: 1px dashed var(--border-strong); border-radius: 6px; }
 
 /* telemetry rows */
 .spec-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 0.88rem; }

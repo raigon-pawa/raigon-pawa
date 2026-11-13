@@ -176,12 +176,14 @@ function toggleXray() {
 }
 xrayBtn.addEventListener("click", toggleXray);
 
-// ---- loose bolt: three clicks and every module drops out of the grid as a throwable body ----
-const bolt = $("bolt"), grid = $("grid"), pill = $("reassemble");
-let boltClicks = 0, unbolted = false, bodies = [], physicsFrame;
+// ---- loose bolt: three clicks and every module drops out of the grid as a throwable body.
+// Each loose module carries a bolt; clicking it fastens that one module back into its slot.
+const bolt = $("bolt"), pill = $("reassemble");
+let boltClicks = 0, unbolted = false, bodies = [], settling = 0, physicsFrame;
 
-bolt.addEventListener("click", () => {
-  if (unbolted) return;
+bolt.addEventListener("click", (e) => {
+  if (unbolted) return; // bubbles to its module, which fastens itself
+  e.stopPropagation(); // unbolt() arms the module's click handler mid-dispatch; this click must not reach it
   bolt.dataset.clicks = ++boltClicks;
   note(150 + boltClicks * 45);
   if (boltClicks >= 3) unbolt();
@@ -193,7 +195,6 @@ function unbolt() {
   note(110);
   // measure everything before anything leaves the flow
   const rects = modules.map((el) => el.getBoundingClientRect());
-  grid.style.minHeight = grid.getBoundingClientRect().height + "px";
 
   bodies = modules.map((el, i) => {
     const r = rects[i];
@@ -203,10 +204,19 @@ function unbolt() {
       angle: 0, va: (Math.random() - 0.5) * 0.35,
       dragging: false, grabX: 0, grabY: 0, lastX: 0, lastY: 0, moved: 0,
     };
+    // an empty slot keeps the module's place in the grid, so it can be bolted back on its own
+    b.slot = Object.assign(document.createElement("div"), { className: "slot " + [...el.classList].find((c) => c.startsWith("col-")) });
+    b.slot.style.height = r.height + "px";
+    el.before(b.slot);
+    if (!el.contains(bolt)) {
+      b.bolt = el.appendChild(Object.assign(document.createElement("button"), { type: "button", className: "bolt bolt-back", title: "Bolt this module back in" }));
+      b.bolt.setAttribute("aria-label", "Bolt this module back in");
+    }
     el.classList.add("unbolted", "in"); // "in": modules not yet scrolled to would otherwise fly around invisible
     Object.assign(el.style, { position: "fixed", left: "0", top: "0", width: r.width + "px", height: r.height + "px", margin: "0" });
 
     el.onpointerdown = (e) => {
+      if (e.target.closest(".bolt")) return; // capturing the pointer would swallow the bolt's click
       b.dragging = true;
       el.setPointerCapture(e.pointerId);
       b.grabX = e.clientX - b.x; b.grabY = e.clientY - b.y;
@@ -221,7 +231,10 @@ function unbolt() {
       b.lastX = e.clientX; b.lastY = e.clientY;
     };
     el.onpointerup = el.onpointercancel = () => { b.dragging = false; b.va = b.vx * 0.08; };
-    el.onclick = (e) => { if (b.moved > 5) e.preventDefault(); }; // letting go of a throw must not open the link under the cursor
+    el.onclick = (e) => {
+      if (e.target.closest(".bolt")) fasten(b);
+      else if (b.moved > 5) e.preventDefault(); // letting go of a throw must not open the link under the cursor
+    };
     el.ondragstart = () => false; // native link dragging would cancel the pointer stream
     return b;
   });
@@ -251,20 +264,36 @@ function stepPhysics() {
   physicsFrame = requestAnimationFrame(stepPhysics);
 }
 
-function reassemble() {
-  if (!unbolted) return;
-  unbolted = false;
-  cancelAnimationFrame(physicsFrame);
-  bolt.dataset.clicks = boltClicks = 0;
-  for (const { el } of bodies) {
-    el.classList.remove("unbolted");
+// Flies one loose module back to its slot and puts it back in the grid.
+function fasten(b) {
+  const { el, slot } = b;
+  bodies.splice(bodies.indexOf(b), 1); // physics lets go of it
+  settling++;
+  el.onpointerdown = el.onpointermove = el.onpointerup = el.onpointercancel = el.onclick = el.ondragstart = null;
+  const r = slot.getBoundingClientRect();
+  el.classList.add("fastening");
+  if (!calm) el.style.transition = "transform 0.35s cubic-bezier(0.34, 1.3, 0.64, 1)";
+  el.style.transform = `translate3d(${r.left}px, ${r.top}px, 0)`;
+  note(196);
+  setTimeout(() => {
+    el.classList.remove("unbolted", "fastening");
+    el.style.cssText = "transition: none"; // the reveal transition would otherwise replay the move from the wrong origin
+    slot.remove();
+    b.bolt?.remove();
+    void el.offsetWidth;
     el.style.cssText = "";
-    el.onpointerdown = el.onpointermove = el.onpointerup = el.onpointercancel = el.onclick = el.ondragstart = null;
-  }
-  bodies = [];
-  grid.style.minHeight = "";
-  pill.classList.remove("visible");
-  note(329.63);
+    if (--settling || bodies.length) return;
+    // the last one is home: the chassis is whole again
+    unbolted = false;
+    cancelAnimationFrame(physicsFrame);
+    bolt.dataset.clicks = boltClicks = 0;
+    pill.classList.remove("visible");
+    note(329.63);
+  }, calm ? 0 : 360);
+}
+
+function reassemble() {
+  [...bodies].forEach(fasten);
 }
 pill.addEventListener("click", reassemble);
 
@@ -292,7 +321,7 @@ function run(cmd) {
     case "sudo": return "guest is not in the sudoers file. this incident will be reported.";
     case "xray": return `blueprint overlay ${toggleXray() ? "on" : "off"}.`;
     case "synth": return toggleSynth() ? "synth armed. hover a project row." : "synth muted.";
-    case "unbolt": return unbolted ? "already unbolted. try: reassemble" : (unbolt(), "fasteners released. drag and throw any module.");
+    case "unbolt": return unbolted ? "already unbolted. try: reassemble" : (unbolt(), "fasteners released. throw the modules around; click a module's bolt to fasten it back.");
     case "reassemble": return unbolted ? (reassemble(), "chassis restored to the grid.") : "nothing is loose. yet.";
     default: return `command not found: ${name} — try help`;
   }
