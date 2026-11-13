@@ -57,7 +57,7 @@
       <span>system online — last login: <span id="today"></span> from 127.0.0.1</span>
     </div>
 
-    <h1 class="s14 h15" title="yes, hover the name. very glitch. much cyber.">Raigon Pawa</h1>
+    <h1 class="s14 h15" aria-label="Raigon Pawa" title="yes, hover the name. very glitch. much cyber.">Raigon Pawa</h1>
 
     <div class="s16">
       <span class="s17">&gt; </span><span id="typed"></span><span class="s18">▊</span>
@@ -199,7 +199,8 @@
           <span><span class="s56">▸</span> <span class="s57">saas-project</span> <span class="s17">— SaaS for non-tech-savvy clients</span> <span class="s58">[building]</span></span>
           <span><span class="s56">▸</span> <a class="s59 h60" href="https://paugai.com/" target="_blank" rel="noopener">paugai.com</a> <span class="s17">— pay-as-you-go AI aggregator</span> <span class="s58">[contributing]</span></span>
           <span><span class="s56">▸</span> <span class="s57">it-degree</span> <span class="s17">— the official reason I'm awake</span> <span class="s58">[in progress]</span></span>
-          <span class="s61">$ <span class="s62">▊</span></span>
+          <div id="term-out" class="t-out" aria-live="polite"></div>
+          <label class="s61 t-row">$ <input id="term-in" class="t-in" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="60" placeholder="type 'help'" aria-label="terminal command"></label>
         </div>
       </div>
     </div>
@@ -312,6 +313,5 @@
     <span class="s28">uptime: <span class="s58"><span id="uptime">0s</span></span> · status: <span class="s56">nominal</span></span>
   </footer>
 </div>
-</x-dc>
 </body>
 </html>
