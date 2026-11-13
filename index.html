@@ -28,290 +28,297 @@
 </head>
 <body>
 
-<div class="s0">
-
-  <!-- ambient glow -->
-  <div class="s1"></div>
-
-  
-    <div class="s2"></div>
-    <div class="s3"></div>
-  
-
-  <!-- ===================== NAV ===================== -->
-  <nav class="s4" data-screen-label="Nav">
-    <a class="s5" href="#top">raigon@pawa:~$</a>
-    <div class="s6">
-      <a class="s7 h8" href="#projects">./projects</a>
-      <a class="s7 h8" href="#about">./about</a>
-      <a class="s7 h8" href="#skills">./skills</a>
-      <a class="s7 h8" href="#sponsor">./sponsor</a>
-      <a class="s9 h10" href="#contact">./contact --now</a>
+  <!-- ===================== SHELL DRAWER ===================== -->
+  <div class="cli-drawer" id="cli">
+    <div class="cli-inner">
+      <div class="cli-output" id="cli-out" aria-live="polite"><div>raigon@pawa // shell — type 'help' or click a command below.</div></div>
+      <label class="cli-input-row">
+        <span class="cli-prompt">~/portfolio $</span>
+        <input class="cli-input" id="cli-in" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="60" placeholder="enter command (Esc to close)" aria-label="shell command">
+      </label>
+      <div class="cli-chips">
+        <button class="cli-chip" type="button" data-cmd="help">help</button>
+        <button class="cli-chip" type="button" data-cmd="ls">ls</button>
+        <button class="cli-chip" type="button" data-cmd="xray">xray</button>
+        <button class="cli-chip" type="button" data-cmd="synth">synth</button>
+        <button class="cli-chip" type="button" data-cmd="unbolt">unbolt</button>
+        <button class="cli-chip" type="button" data-cmd="clear">clear</button>
+      </div>
     </div>
-  </nav>
+  </div>
 
-  <!-- ===================== HERO ===================== -->
-  <section class="s11" id="top" data-screen-label="Hero">
-    <div class="s12">
-      <span class="s13"></span>
-      <span>system online — last login: <span id="today"></span> from 127.0.0.1</span>
-    </div>
+  <div class="wrap">
 
-    <h1 class="s14 h15" aria-label="Raigon Pawa" title="yes, hover the name. very glitch. much cyber.">Raigon Pawa</h1>
+    <!-- ===================== TOP BAR ===================== -->
+    <header class="topbar">
+      <button class="sys-trigger" id="cli-trigger" type="button" title="Open the shell (`)" aria-controls="cli" aria-expanded="false">
+        <span class="status-dot"></span>
+        <span>raigon@pawa:~$</span>
+        <span class="cursor-blink"></span>
+      </button>
+      <nav class="nav" aria-label="Sections">
+        <a href="#projects">./projects</a>
+        <a href="#about">./about</a>
+        <a href="#skills">./skills</a>
+        <a href="#sponsor">./sponsor</a>
+        <a href="#contact">./contact</a>
+      </nav>
+      <button class="scope-wrap" id="synth-toggle" type="button" title="Arm the synth: project rows play a note on hover" aria-pressed="false">
+        <span id="synth-label">SIGNAL: STANDBY</span>
+        <canvas id="scope" width="144" height="40" aria-hidden="true"></canvas>
+      </button>
+    </header>
 
-    <div class="s16">
-      <span class="s17">&gt; </span><span id="typed"></span><span class="s18">▊</span>
-    </div>
+    <main class="grid" id="grid">
 
-    <p class="s19">
-      IT student who builds things nobody asked for — and occasionally things people did.
-      Currently shipping a SaaS for non-tech-savvy clients and contributing to a
-      pay-as-you-go AI aggregator. Fluent in Linux, networks, and reinventing wheels.
-    </p>
-
-    <div class="s20">
-      <a class="s21 h22" href="#projects">cat projects/*</a>
-      <a class="s23 h24" href="https://github.com/raigon-pawa" target="_blank" rel="noopener">github ↗</a>
-    </div>
-  </section>
-
-  <!-- ===================== PROJECTS ===================== -->
-  <section class="s25" id="projects" data-screen-label="Projects">
-    <div class="s26">
-      <h2 class="s27">Projects</h2>
-      <span class="s28">// 5 results, 0 regrets</span>
-    </div>
-    <div class="s29"></div>
-
-    <div class="s30">
-
-      <!-- Silicon River -->
-      <a class="s31 h32" href="https://myrig.app/" target="_blank" rel="noopener">
-        <div class="s33">
-          <span class="s34">PRJ-001 · LIVE</span>
-          <span class="s35">web + mobile app</span>
+      <!-- ===================== OVERVIEW ===================== -->
+      <section class="module module-accent-orange col-8" id="top">
+        <div class="label">
+          <h2 class="label-accent">01 // Overview</h2>
+          <span id="name" title="yes, hover the name. very glitch. much cyber.">Raigon Pawa</span>
         </div>
-        <h3 class="s36 h37">Silicon River</h3>
-        <p class="s38">The social network for PC builders — post your rig, log benchmarks, get rated, and follow other builders. Web and Flutter mobile apps on Supabase, with a hardware catalog and image moderation.</p>
-        <div class="s39">
-          <span class="s40">next.js</span>
-          <span class="s40">flutter</span>
-          <span class="s40">supabase</span>
-          <span class="s40">cloudflare r2</span>
-          <span class="s40">social</span>
-          <span class="s40">vercel</span>
+        <h1>IT student who builds things <span class="highlight-word">nobody asked for</span> — and occasionally things people did.</h1>
+        <p class="typed-row"><span class="prompt">&gt;</span> <span id="typed"></span> <span class="cursor-blink"></span></p>
+        <p class="lead">
+          Currently shipping a SaaS for non-tech-savvy clients and contributing to a
+          pay-as-you-go AI aggregator. Fluent in Linux, networks, and reinventing wheels.
+        </p>
+        <div class="pill-row">
+          <a class="btn btn-primary" href="#projects">cat projects/*</a>
+          <a class="btn" href="https://github.com/raigon-pawa" target="_blank" rel="noopener">github ↗</a>
         </div>
-      </a>
+        <span class="xray-note">/* fonts self-hosted · CSP default-src 'none' · zero frameworks */</span>
+      </section>
 
-      <!-- Codex bot -->
-      <a class="s31 h32" href="https://github.com/raigon-pawa/codex-bot" target="_blank" rel="noopener">
-        <div class="s33">
-          <span class="s34">PRJ-002 · v1.1.0</span>
-          <span class="s35">python</span>
+      <!-- ===================== TELEMETRY ===================== -->
+      <section class="module module-accent-cyan col-4">
+        <div class="label">
+          <h2>02 // Telemetry</h2>
+          <button class="bolt" id="bolt" type="button" data-clicks="0" title="Fastener M2 (torque: 0.2 Nm)" aria-label="Loose fastener"></button>
         </div>
-        <h3 class="s36 h37">Codex</h3>
-        <p class="s38">A modular Discord bot with 31 slash commands: study tools, Claude-powered AI chat, music, moderation, XP levels. Runs hardened in Docker on a NAS, auto-deploys itself.</p>
-        <div class="s39">
-          <span class="s40">discord.py</span>
-          <span class="s40">docker</span>
-          <span class="s40">claude api</span>
-          <span class="s40">sqlite</span>
-        </div>
-      </a>
+        <div class="spec-row"><span class="spec-key">Role</span><span>IT student</span></div>
+        <div class="spec-row"><span class="spec-key">Status</span><span class="c-emerald">nominal</span></div>
+        <div class="spec-row"><span class="spec-key">Last login</span><span id="today"></span></div>
+        <div class="spec-row"><span class="spec-key">From</span><span class="mono">127.0.0.1</span></div>
+        <div class="spec-row"><span class="spec-key">Uptime</span><span class="mono c-cyan" id="uptime">0s</span></div>
+        <div class="spec-row"><span class="spec-key">Shell</span><span class="mono">press [`]</span></div>
+        <span class="xray-note">/* warning: top-right M2 fastener is loose. 3 clicks = structural failure */</span>
+      </section>
 
-      <!-- ModSelector -->
-      <a class="s31 h32" href="https://github.com/raigon-pawa/ModSelector" target="_blank" rel="noopener">
-        <div class="s33">
-          <span class="s34">PRJ-003 · v1.0.0</span>
-          <span class="s35">desktop</span>
+      <!-- ===================== PROJECTS ===================== -->
+      <section class="module col-12" id="projects">
+        <div class="label">
+          <h2>03 // Projects</h2>
+          <span class="c-cyan">5 results, 0 regrets</span>
         </div>
-        <h3 class="s36 h37">ModSelector</h3>
-        <p class="s38">A clean JavaFX GUI for bulk-downloading Minecraft mods from Modrinth. Live search, filters, a download queue, and SHA-512 integrity checks — ships with its own bundled runtime.</p>
-        <div class="s39">
-          <span class="s40">java</span>
-          <span class="s40">javafx</span>
-          <span class="s40">modrinth api</span>
-        </div>
-      </a>
+        <div class="work-list">
 
-      <!-- QRCodeAPI -->
-      <a class="s31 h32" href="https://github.com/raigon-pawa/QRCodeAPI" target="_blank" rel="noopener">
-        <div class="s33">
-          <span class="s34">PRJ-004 · LIVE API</span>
-          <span class="s35">javascript</span>
-        </div>
-        <h3 class="s36 h37">QRCodeAPI</h3>
-        <p class="s38">A QR code generator API written from scratch — "reinventing the wheel because I hate myself :)". PNG, SVG, ASCII and JSON output, rate-limited and open to anyone.</p>
-        <div class="s39">
-          <span class="s40">node</span>
-          <span class="s40">rest api</span>
-          <span class="s40">from scratch</span>
-        </div>
-      </a>
+          <a class="work-item" href="https://myrig.app/" target="_blank" rel="noopener" data-freq="220.00">
+            <div class="work-thumb c-cyan">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="1"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>
+            </div>
+            <span class="work-hex">PRJ-001</span>
+            <div>
+              <h3 class="work-title">Silicon River</h3>
+              <p class="work-desc">The social network for PC builders — post your rig, log benchmarks, get rated, and follow other builders. Web and Flutter mobile apps on Supabase, with a hardware catalog and image moderation.</p>
+              <p class="work-stack">next.js · flutter · supabase · cloudflare r2 · social · vercel</p>
+            </div>
+            <span class="work-tag tag-emerald">web + mobile / live</span>
+          </a>
 
-      <!-- PaugAI (contributor, full-width) -->
-      <a class="s41 h32" href="https://paugai.com/" target="_blank" rel="noopener">
-        <div class="s42">
-          <div class="s33">
-            <span class="s34">PRJ-005 · CONTRIBUTOR</span>
-            <span class="s35">saas</span>
-          </div>
-          <h3 class="s36 h37">PaugAI</h3>
-          <p class="s43">A pay-as-you-go AI aggregator — one place for many models, priced per use instead of per subscription. I contribute to making it fast, fair, and friendly.</p>
-          <div class="s44">
-            <span class="s40">ai</span>
-            <span class="s40">pay-as-you-go</span>
-            <span class="s40">full-stack</span>
-          </div>
-        </div>
-        <span class="s45">paugai.com ↗</span>
-      </a>
-    </div>
-  </section>
+          <a class="work-item" href="https://github.com/raigon-pawa/codex-bot" target="_blank" rel="noopener" data-freq="261.63">
+            <div class="work-thumb c-orange">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="8" width="16" height="11" rx="2"/><path d="M12 4v4M9 13v2M15 13v2"/></svg>
+            </div>
+            <span class="work-hex">PRJ-002</span>
+            <div>
+              <h3 class="work-title">Codex</h3>
+              <p class="work-desc">A modular Discord bot with 31 slash commands: study tools, Claude-powered AI chat, music, moderation, XP levels. Runs hardened in Docker on a NAS, auto-deploys itself.</p>
+              <p class="work-stack">discord.py · docker · claude api · sqlite</p>
+            </div>
+            <span class="work-tag tag-cyan">python / v1.1.0</span>
+          </a>
 
-  <!-- ===================== ABOUT ===================== -->
-  <section class="s25" id="about" data-screen-label="About">
-    <div class="s46">
-      <div>
-        <div class="s26">
-          <h2 class="s27">About</h2>
-          <span class="s28">// whoami</span>
+          <a class="work-item" href="https://github.com/raigon-pawa/ModSelector" target="_blank" rel="noopener" data-freq="293.66">
+            <div class="work-thumb c-emerald">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5v8l-9 5-9-5V8zM12 12l9-4M12 12v9M12 12L3 8"/></svg>
+            </div>
+            <span class="work-hex">PRJ-003</span>
+            <div>
+              <h3 class="work-title">ModSelector</h3>
+              <p class="work-desc">A clean JavaFX GUI for bulk-downloading Minecraft mods from Modrinth. Live search, filters, a download queue, and SHA-512 integrity checks — ships with its own bundled runtime.</p>
+              <p class="work-stack">java · javafx · modrinth api</p>
+            </div>
+            <span class="work-tag tag-cyan">desktop / v1.0.0</span>
+          </a>
+
+          <a class="work-item" href="https://github.com/raigon-pawa/QRCodeAPI" target="_blank" rel="noopener" data-freq="329.63">
+            <div class="work-thumb c-amber">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM21 17v4h-4"/></svg>
+            </div>
+            <span class="work-hex">PRJ-004</span>
+            <div>
+              <h3 class="work-title">QRCodeAPI</h3>
+              <p class="work-desc">A QR code generator API written from scratch — "reinventing the wheel because I hate myself :)". PNG, SVG, ASCII and JSON output, rate-limited and open to anyone.</p>
+              <p class="work-stack">node · rest api · from scratch</p>
+            </div>
+            <span class="work-tag tag-emerald">javascript / live api</span>
+          </a>
+
+          <a class="work-item" href="https://paugai.com/" target="_blank" rel="noopener" data-freq="392.00">
+            <div class="work-thumb c-cyan">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="12" r="2"/><path d="M7 6h4l4 6h2M7 18h4l4-6"/></svg>
+            </div>
+            <span class="work-hex">PRJ-005</span>
+            <div>
+              <h3 class="work-title">PaugAI</h3>
+              <p class="work-desc">A pay-as-you-go AI aggregator — one place for many models, priced per use instead of per subscription. I contribute to making it fast, fair, and friendly.</p>
+              <p class="work-stack">ai · pay-as-you-go · full-stack · paugai.com ↗</p>
+            </div>
+            <span class="work-tag tag-amber">saas / contributor</span>
+          </a>
+
         </div>
-        <div class="s47"></div>
-        <p class="s48">
+        <span class="xray-note">/* arm SIGNAL in the top bar, then hover a row: every project has its own pitch */</span>
+      </section>
+
+      <!-- ===================== ABOUT ===================== -->
+      <section class="module col-6" id="about">
+        <div class="label"><h2>04 // About</h2><span class="c-emerald">whoami</span></div>
+        <p class="lead lead-sm">
           IT student by day, self-hosting enthusiast by night. I like understanding
           systems all the way down — which is how a "quick project" becomes a QR code
           encoder written from scratch.
         </p>
-        <p class="s49">
+        <p class="lead lead-sm">
           The through-line: build it properly, ship it, and make it usable by people
           who don't speak terminal.
         </p>
-      </div>
-      <div class="s50">
-        <div class="s51">
-          <span class="s52"></span>
-          <span class="s52"></span>
-          <span class="s53"></span>
-          <span class="s54">currently_running.sh</span>
+        <span class="xray-note">/* "quick project" is a known lie */</span>
+      </section>
+
+      <!-- ===================== CURRENTLY RUNNING ===================== -->
+      <section class="module col-6">
+        <div class="label"><h2>05 // Currently running</h2><span class="c-amber">ps aux</span></div>
+        <div class="spec-row run-row">
+          <span class="spec-key">saas-project</span>
+          <span>SaaS for non-tech-savvy clients</span>
+          <span class="work-tag tag-orange">building</span>
         </div>
-        <div class="s55">
-          <span><span class="s56">▸</span> <span class="s57">saas-project</span> <span class="s17">— SaaS for non-tech-savvy clients</span> <span class="s58">[building]</span></span>
-          <span><span class="s56">▸</span> <a class="s59 h60" href="https://paugai.com/" target="_blank" rel="noopener">paugai.com</a> <span class="s17">— pay-as-you-go AI aggregator</span> <span class="s58">[contributing]</span></span>
-          <span><span class="s56">▸</span> <span class="s57">it-degree</span> <span class="s17">— the official reason I'm awake</span> <span class="s58">[in progress]</span></span>
-          <div id="term-out" class="t-out" aria-live="polite"></div>
-          <label class="s61 t-row">$ <input id="term-in" class="t-in" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="60" placeholder="type 'help'" aria-label="terminal command"></label>
+        <div class="spec-row run-row">
+          <a class="spec-key" href="https://paugai.com/" target="_blank" rel="noopener">paugai.com</a>
+          <span>pay-as-you-go AI aggregator</span>
+          <span class="work-tag tag-cyan">contributing</span>
         </div>
-      </div>
-    </div>
-  </section>
+        <div class="spec-row run-row">
+          <span class="spec-key">it-degree</span>
+          <span>the official reason I'm awake</span>
+          <span class="work-tag tag-amber">in progress</span>
+        </div>
+        <span class="xray-note">/* shake the mouse hard. something in here is hungry */</span>
+      </section>
 
-  <!-- ===================== SKILLS ===================== -->
-  <section class="s25" id="skills" data-screen-label="Skills">
-    <div class="s26">
-      <h2 class="s27">Skills</h2>
-      <span class="s28">// lsmod --human-readable</span>
-    </div>
-    <div class="s29"></div>
+      <!-- ===================== SKILLS ===================== -->
+      <section class="module col-12" id="skills">
+        <div class="label"><h2>06 // Skills</h2><span>lsmod --human-readable</span></div>
+        <div class="cells">
+          <div class="cell">
+            <span class="spec-key c-cyan">MOD-01</span>
+            <h3 class="work-title">Linux</h3>
+            <p class="work-desc">Daily driver. Servers, containers, and the occasional 2am rescue of a system I broke myself.</p>
+          </div>
+          <div class="cell">
+            <span class="spec-key c-cyan">MOD-02</span>
+            <h3 class="work-title">Networking</h3>
+            <p class="work-desc">Routing, self-hosting without port-forwarding, and knowing exactly why it's always DNS.</p>
+          </div>
+          <div class="cell">
+            <span class="spec-key c-cyan">MOD-03</span>
+            <h3 class="work-title">Programming</h3>
+            <p class="work-desc">Python, JavaScript, Java — whichever language the problem deserves, plus shell for everything else.</p>
+          </div>
+          <div class="cell">
+            <span class="spec-key c-cyan">MOD-04</span>
+            <h3 class="work-title">Full-stack</h3>
+            <p class="work-desc">From REST APIs to frontends people actually enjoy — deployed on Vercel, Docker, or a NAS in the corner.</p>
+          </div>
+        </div>
+        <span class="xray-note">/* it's always DNS */</span>
+      </section>
 
-    <div class="s63">
-      <div class="s64 h65">
-        <div class="s66">MOD-01</div>
-        <h3 class="s67">Linux</h3>
-        <p class="s68">Daily driver. Servers, containers, and the occasional 2am rescue of a system I broke myself.</p>
-      </div>
-      <div class="s64 h65">
-        <div class="s66">MOD-02</div>
-        <h3 class="s67">Networking</h3>
-        <p class="s68">Routing, self-hosting without port-forwarding, and knowing exactly why it's always DNS.</p>
-      </div>
-      <div class="s64 h65">
-        <div class="s66">MOD-03</div>
-        <h3 class="s67">Programming</h3>
-        <p class="s68">Python, JavaScript, Java — whichever language the problem deserves, plus shell for everything else.</p>
-      </div>
-      <div class="s64 h65">
-        <div class="s66">MOD-04</div>
-        <h3 class="s67">Full-stack</h3>
-        <p class="s68">From REST APIs to frontends people actually enjoy — deployed on Vercel, Docker, or a NAS in the corner.</p>
-      </div>
-    </div>
-  </section>
+      <!-- ===================== SPONSOR ===================== -->
+      <section class="module col-12" id="sponsor">
+        <div class="label"><h2>07 // Sponsor</h2><span>keep the servers humming</span></div>
+        <div class="split">
+          <div>
+            <p class="lead lead-sm">
+              Everything here is free and open — QRCodeAPI runs on a rate limit I pay for,
+              Codex hums along on a NAS that draws real electricity, and the wheels keep
+              getting reinvented on caffeine. Sponsoring keeps the lights on.
+            </p>
+            <div class="pill-row">
+              <a class="btn btn-primary" href="https://github.com/sponsors/raigon-pawa" target="_blank" rel="noopener"><span>♥</span> sponsor on GitHub ↗</a>
+            </div>
+          </div>
+          <div class="cells cells-tight">
+            <a class="cell" href="https://github.com/sponsors/raigon-pawa/sponsorships?sponsor=raigon-pawa&tier_id=656740&preview=false" target="_blank" rel="noopener">
+              <span class="cell-head"><span class="spec-key">TIER-01</span></span>
+              <span class="price">$3<small>/mo</small></span>
+              <span class="work-desc">buy-me-a-coffee tier. name in the README hall of fame.</span>
+            </a>
+            <a class="cell" href="https://github.com/sponsors/raigon-pawa/sponsorships?sponsor=raigon-pawa&tier_id=656744&preview=false" target="_blank" rel="noopener">
+              <span class="cell-head"><span class="spec-key">TIER-02</span><span class="work-tag tag-orange">popular</span></span>
+              <span class="price">$10<small>/mo</small></span>
+              <span class="work-desc">priority on bug reports + early access to new builds.</span>
+            </a>
+            <a class="cell" href="https://github.com/sponsors/raigon-pawa/sponsorships?sponsor=raigon-pawa&tier_id=656745&preview=false" target="_blank" rel="noopener">
+              <span class="cell-head"><span class="spec-key">TIER-03</span></span>
+              <span class="price">$25<small>/mo</small></span>
+              <span class="work-desc">1:1 chat about your project, feature requests bumped to top.</span>
+            </a>
+          </div>
+        </div>
+        <span class="xray-note">/* the NAS draws real electricity */</span>
+      </section>
 
-  <!-- ===================== SPONSOR ===================== -->
-  <section class="s25" id="sponsor" data-screen-label="Sponsor">
-    <div class="s26">
-      <h2 class="s27">Sponsor</h2>
-      <span class="s28">// keep the servers humming</span>
-    </div>
-    <div class="s29"></div>
+      <!-- ===================== CONTACT ===================== -->
+      <section class="module col-12" id="contact">
+        <div class="label"><h2>08 // Contact</h2><span>open a connection</span></div>
+        <div class="cells cells-wide">
+          <a class="cell" href="https://github.com/raigon-pawa" target="_blank" rel="noopener">
+            <span class="spec-key">GitHub</span>
+            <span class="cell-value">github.com/raigon-pawa ↗</span>
+          </a>
+          <a class="cell" href="https://www.linkedin.com/in/kabbo-augustine-gomes-b132a1403" target="_blank" rel="noopener">
+            <span class="spec-key">LinkedIn</span>
+            <span class="cell-value">kabbo-augustine-gomes ↗</span>
+          </a>
+          <button class="cell" id="copy-discord" type="button">
+            <span class="spec-key">Discord</span>
+            <span class="cell-value" id="discord-label">_raigon (click to copy)</span>
+          </button>
+          <a class="cell" href="mailto:contact@raigonpawa.dev">
+            <span class="spec-key">Email</span>
+            <span class="cell-value">contact@raigonpawa.dev</span>
+          </a>
+        </div>
+        <span class="xray-note">/* no form, no backend: the discord button just copies the handle */</span>
+      </section>
 
-    <div class="s69">
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+      <span>© 2026 Raigon Pawa · handcrafted HTML · no frameworks were harmed</span>
       <div>
-        <p class="s48">
-          Everything here is free and open — QRCodeAPI runs on a rate limit I pay for,
-          Codex hums along on a NAS that draws real electricity, and the wheels keep
-          getting reinvented on caffeine. Sponsoring keeps the lights (and the neon) on.
-        </p>
-        <a class="s70 h22" href="https://github.com/sponsors/raigon-pawa" target="_blank" rel="noopener">
-          <span>♥</span> sponsor on GitHub ↗
-        </a>
+        <button class="footer-action" id="xray-toggle" type="button" aria-pressed="false">X-RAY: OFF</button>
+        <span class="footer-sep">·</span>
+        <button class="footer-action" id="cli-open" type="button">SHELL [`]</button>
       </div>
+    </footer>
+  </div>
 
-      <div class="s71">
-        <a class="s72 h73" href="https://github.com/sponsors/raigon-pawa/sponsorships?sponsor=raigon-pawa&tier_id=656740&preview=false" target="_blank" rel="noopener">
-          <span class="s34">TIER-01</span>
-          <span class="s74">$3<span class="s75">/mo</span></span>
-          <span class="s76">buy-me-a-coffee tier. name in the README hall of fame.</span>
-        </a>
-        <a class="s77 h78" href="https://github.com/sponsors/raigon-pawa/sponsorships?sponsor=raigon-pawa&tier_id=656744&preview=false" target="_blank" rel="noopener">
-          <span class="s79">POPULAR</span>
-          <span class="s34">TIER-02</span>
-          <span class="s74">$10<span class="s75">/mo</span></span>
-          <span class="s76">priority on bug reports + early access to new builds.</span>
-        </a>
-        <a class="s72 h73" href="https://github.com/sponsors/raigon-pawa/sponsorships?sponsor=raigon-pawa&tier_id=656745&preview=false" target="_blank" rel="noopener">
-          <span class="s34">TIER-03</span>
-          <span class="s74">$25<span class="s75">/mo</span></span>
-          <span class="s76">1:1 chat about your project, feature requests bumped to top.</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  <button class="reassemble-pill" id="reassemble" type="button">↺ REASSEMBLE CHASSIS</button>
 
-  <!-- ===================== CONTACT ===================== -->
-  <section class="s80" id="contact" data-screen-label="Contact">
-    <div class="s26">
-      <h2 class="s27">Contact</h2>
-      <span class="s28">// open a connection</span>
-    </div>
-    <div class="s29"></div>
-
-    <div class="s81">
-      <a class="s82 h83" href="https://github.com/raigon-pawa" target="_blank" rel="noopener">
-        <span class="s84">GITHUB</span>
-        <span class="s85">github.com/raigon-pawa ↗</span>
-      </a>
-      <a class="s82 h83" href="https://www.linkedin.com/in/kabbo-augustine-gomes-b132a1403" target="_blank" rel="noopener">
-        <span class="s84">LINKEDIN</span>
-        <span class="s85">kabbo-augustine-gomes ↗</span>
-      </a>
-      <button class="s86 h83" id="copy-discord" type="button">
-        <span class="s84">DISCORD</span>
-        <span class="s85"><span id="discord-label">_raigon (click to copy)</span></span>
-      </button>
-      <a class="s87 h83" href="mailto:contact@raigonpawa.dev">
-        <span class="s84">EMAIL</span>
-        <span class="s88">contact@raigonpawa.dev</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="s89" data-screen-label="Footer">
-    <span class="s28">© 2026 Raigon Pawa · handcrafted HTML · no frameworks were harmed</span>
-    <span class="s28">uptime: <span class="s58"><span id="uptime">0s</span></span> · status: <span class="s56">nominal</span></span>
-  </footer>
-</div>
 </body>
 </html>
